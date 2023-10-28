@@ -4,13 +4,14 @@ import Debug.Trace
 
 {--
 store [Component "C1" 8, Component "C2" 16, Component "C3" 4] "C4" 12
-isProductable (Product "my product" [("C1", 1), ("C2", 2)]) [Component "C1" 8, Component "C2" 16, Component "C3" 4]
+isProducible (Product "my product" [("Wood",3),("Stone",5)]) [Component "Wood" 10, Component "Stone" 10]
+produce (Product "my product" [("Wood",3),("Stone",5)]) [Component "Wood" 10, Component "Stone" 10]
 --}
 
 data Component a = Component a Natural
     deriving Show
 type Storage a = [Component a]
-data Product a b = Product a [(b, Int)]
+data Product a b = Product b [(a, Natural)] -- modified definition
 
 -- returns the amount of a component in a storage if it exists
 contains :: Eq a => Storage a -> a -> Maybe Natural
@@ -46,13 +47,24 @@ remove storage description amount
     | otherwise                                = remove' storage description amount [] -- if value has to be removed
 
 -- checks if the storage has enough of the needed components
--- https://elearning.ovgu.de/pluginfile.php/901028/mod_resource/content/1/exercise03.pdf
-isProductable' :: Eq a => [(a, Int)] -> [Component a] -> Bool
+isProducible' :: (Eq a) => [(a, Natural)] -> Storage a -> Bool
+isProducible' tlist storage
+    | null tlist = True -- product without any requirements is always producible
 isProducible' (tupel:tupelTail) storage
-    | fst tupel 
+    | isNothing (contains storage (fst tupel))            = False -- if required component is not in storage
+    | snd tupel > fromJust (contains storage (fst tupel)) = False -- if required amount exceeds storage capacity
+    | null tupelTail                                      = True
+    | otherwise                                           = isProducible' tupelTail storage
 isProducible :: (Eq a, Eq b) => Product a b -> Storage a -> Bool
-isProducible (Product name requiredComponents) storage
-    | isProducible' requiredComponents storage
+isProducible (Product name requiredComponents) = isProducible' requiredComponents
 
 -- removes the used components from the storage
---produce :: (Eq a, Eq b) ⇒ Product b a → Storage a → Storage a
+produce' :: (Eq a) => [(a, Natural)] -> Storage a -> Storage a
+produce' requiredComponents storage
+    | null requiredComponents      = storage -- product without any requirements is always producible
+produce' (tupel:tupelTail) storage = produce' tupelTail (uncurry (remove storage) tupel)
+
+produce :: (Eq a, Eq b) => Product a b -> Storage a -> Storage a
+produce product storage
+    | not (isProducible product storage) = storage
+produce (Product name requiredComponents) storage = produce' requiredComponents storage
