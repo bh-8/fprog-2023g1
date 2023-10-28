@@ -1,6 +1,5 @@
 import Numeric.Natural
 import Data.Maybe
-import Debug.Trace
 
 {--
 store [Component "C1" 8, Component "C2" 16, Component "C3" 4] "C4" 12
