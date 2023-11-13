@@ -19,3 +19,9 @@
 3. [Components and Products](./sheet_3/Task33.hs)
 4. Polymorphism Quirks
 5. [Sets](./sheet_3/Task35.hs)*
+### Exercise Sheet 4
+1. [map, foldl, foldr, filter](./sheet_4/Task41.hs)
+2. [Underscores, Types](./sheet_4/Task42.md)
+3. [Streams and higher order functions](./sheet_4/Task43.hs)
+4. [Advanced folding and filtering](./sheet_4/Task44.hs)
+5. [Function family and stream of streams](./sheet_4/Task45.hs)*
