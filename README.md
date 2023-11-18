@@ -25,3 +25,10 @@
 3. [Streams and higher order functions](./sheet_4/Task43.hs)
 4. [Advanced folding and filtering](./sheet_4/Task44.hs)
 5. [Function family and stream of streams](./sheet_4/Task45.hs)*
+### Exercise Sheet 5
+1. [Comprehensible Streams](./sheet_5/Task51.hs)
+2. [The Functor class and its limits](./sheet_5/Task52.md)
+3. [The Functor class and its limits continued](./sheet_5/Task53.hs)
+4. [Folding](./sheet_5/Task54.hs)
+5. [Functor Functor and Foldable Foldable](./sheet_5/Task55.hs)
+6. [Not enough Folding and Mapping: Functor3 and Foldable3](./sheet_5/Task56.hs)*
