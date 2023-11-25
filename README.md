@@ -32,3 +32,9 @@
 4. [Folding](./sheet_5/Task54.hs)
 5. [Functor Functor and Foldable Foldable](./sheet_5/Task55.hs)
 6. [Not enough Folding and Mapping: Functor3 and Foldable3](./sheet_5/Task56.hs)*
+### Exercise Sheet 6
+1. Keeping things sorted
+2. [Deques](./sheet_6/Task62.hs), Module '[Deque](./sheet_6/Deque.hs)'
+3. [Deques as Stacks/Queues](./sheet_6/Task63.hs), Modules '[MyStack](./sheet_6/MyStack.hs)', '[MyQueue](./sheet_6/MyQueue.hs)', '[Deque](./sheet_6/Deque.hs)'
+4. [Vectors](./sheet_6/Task64.hs), Module '[MyVector](./sheet_6/MyVector.hs)'
+5. [Maps and a very clunky TicTacToe](./sheet_6/Task65.hs)*, Module '[TicTacToe](./sheet_6/TicTacToe.hs)'
