@@ -1,0 +1,5 @@
+#!/bin/bash
+cabal update
+cabal install --lib tasty --package-env .
+cabal install --lib tasty-quickcheck --package-env .
+exit 0

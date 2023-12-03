@@ -38,3 +38,9 @@
 3. [Deques as Stacks/Queues](./sheet_6/Task63.hs), Modules '[MyStack](./sheet_6/MyStack.hs)', '[MyQueue](./sheet_6/MyQueue.hs)', '[Deque](./sheet_6/Deque.hs)'
 4. [Vectors](./sheet_6/Task64.hs), Module '[MyVector](./sheet_6/MyVector.hs)'
 5. [Maps and a very clunky TicTacToe](./sheet_6/Task65.hs)*, Module '[TicTacToe](./sheet_6/TicTacToe.hs)'
+### Exercise Sheet 7
+1. Deque axioms
+2. More axioms: Sorted List
+3. [Trace](./sheet_7/Task73.hs)
+4. Tasty
+5. Axiom puzzle*

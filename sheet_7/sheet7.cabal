@@ -1,0 +1,26 @@
+cabal-version:      2.4
+name:               sheet7
+version:            0.1.0.0
+
+author:             Bernhard Birnbaum
+maintainer:         bernhard.birnbaum@ovgu.de
+
+executable Task71
+    main-is:          Task71.hs
+    other-modules:    Deque
+    build-depends:    base ^>=4.17.2.0, tasty, tasty-quickcheck
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable Task72
+    main-is:          Task72.hs
+    other-modules:    SortedList
+    build-depends:    base ^>=4.17.2.0, tasty, tasty-quickcheck
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable Task73
+    main-is:          Task73.hs
+    build-depends:    base ^>=4.17.2.0
+    hs-source-dirs:   src
+    default-language: Haskell2010

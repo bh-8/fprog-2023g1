@@ -1,0 +1,13 @@
+#!/bin/bash
+cabal build
+error_level=$?
+if [ -f "./Task71" ]; then
+    rm -f "./Task71"
+fi
+if [ -f "./Task73" ]; then
+    rm -f "./Task73"
+fi
+[ -f "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet7-0.1.0.0/x/Task71/build/Task71/Task71" ] && cp "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet7-0.1.0.0/x/Task71/build/Task71/Task71" "./Task71"
+[ -f "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet7-0.1.0.0/x/Task72/build/Task72/Task72" ] && cp "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet7-0.1.0.0/x/Task72/build/Task72/Task72" "./Task72"
+[ -f "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet7-0.1.0.0/x/Task73/build/Task73/Task73" ] && cp "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet7-0.1.0.0/x/Task73/build/Task73/Task73" "./Task73"
+exit $error_level
