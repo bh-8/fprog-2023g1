@@ -10,7 +10,11 @@ fi
 if [ -f "./Task73" ]; then
     rm -f "./Task73"
 fi
+if [ -f "./Task75" ]; then
+    rm -f "./Task75"
+fi
 [ -f "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet7-0.1.0.0/x/Task71/build/Task71/Task71" ] && cp "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet7-0.1.0.0/x/Task71/build/Task71/Task71" "./Task71"
 [ -f "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet7-0.1.0.0/x/Task72/build/Task72/Task72" ] && cp "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet7-0.1.0.0/x/Task72/build/Task72/Task72" "./Task72"
 [ -f "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet7-0.1.0.0/x/Task73/build/Task73/Task73" ] && cp "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet7-0.1.0.0/x/Task73/build/Task73/Task73" "./Task73"
+[ -f "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet7-0.1.0.0/x/Task75/build/Task75/Task75" ] && cp "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet7-0.1.0.0/x/Task75/build/Task75/Task75" "./Task75"
 exit $error_level

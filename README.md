@@ -39,8 +39,8 @@
 4. [Vectors](./sheet_6/Task64.hs), Module '[MyVector](./sheet_6/MyVector.hs)'
 5. [Maps and a very clunky TicTacToe](./sheet_6/Task65.hs)*, Module '[TicTacToe](./sheet_6/TicTacToe.hs)'
 ### Exercise Sheet 7
-1. Deque axioms
-2. More axioms: Sorted List
-3. [Trace](./sheet_7/Task73.hs)
+1. [Deque axioms](./sheet_7/src/Task71.hs), Module '[Deque](./sheet_7/src/Deque.hs)'
+2. [More axioms: Sorted List](./sheet_7/src/Task72.hs), Module '[SortedList](./sheet_7/src/SortedList.hs)'
+3. [Trace](./sheet_7/src/Task73.hs)
 4. Tasty
-5. Axiom puzzle*
+5. [Axiom puzzle](./sheet_7/src/Task75.hs)*
