@@ -4,6 +4,9 @@ error_level=$?
 if [ -f "./Task71" ]; then
     rm -f "./Task71"
 fi
+if [ -f "./Task72" ]; then
+    rm -f "./Task72"
+fi
 if [ -f "./Task73" ]; then
     rm -f "./Task73"
 fi

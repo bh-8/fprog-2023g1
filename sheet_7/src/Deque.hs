@@ -27,5 +27,8 @@ module Deque where
     popEnd :: Deque -> Deque
     popEnd (Deque l) = if null l then Deque [] else Deque (init l)
 
+    isEmpty :: Deque -> Bool
+    isEmpty (Deque l) = null l
+
     makeDequeFromList :: [Int] -> Deque
     makeDequeFromList = Deque
