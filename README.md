@@ -44,3 +44,9 @@
 3. [Trace](./sheet_7/src/Task73.hs)
 4. Tasty
 5. [Axiom puzzle](./sheet_7/src/Task75.hs)*
+### Exercise Sheet 8
+1. To do or not to do
+2. Better arbitrary for sorted list
+3. Arbitrary generator for distinct pairs
+4. File manipulation
+5. [Rolling Dice](./sheet_8/src/Task85.hs)*, Module '[DiceRoller](./sheet_8/src/DiceRoller.hs)'

@@ -1,0 +1,20 @@
+cabal-version:      2.4
+name:               sheet8
+version:            0.1.0.0
+
+author:             Bernhard Birnbaum
+maintainer:         bernhard.birnbaum@ovgu.de
+
+executable Task82
+    main-is:          Task82.hs
+    other-modules:    SortedList
+    build-depends:    base ^>=4.17.2.0, tasty, tasty-quickcheck
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable Task85
+    main-is:          Task85.hs
+    other-modules:    DiceRoller
+    build-depends:    base ^>=4.17.2.0, random
+    hs-source-dirs:   src
+    default-language: Haskell2010
