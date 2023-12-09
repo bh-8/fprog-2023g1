@@ -1,8 +1,10 @@
 #!/bin/bash
 cabal build
 error_level=$?
-[ -f "./Task82" ] && rm -f "./Task82"
+#[ -f "./Task82" ] && rm -f "./Task82"
+[ -f "./Task84" ] && rm -f "./Task84"
 [ -f "./Task85" ] && rm -f "./Task85"
 #[ -f "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet8-0.1.0.0/x/Task82/build/Task82/Task82" ] && cp "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet8-0.1.0.0/x/Task82/build/Task82/Task82" "./Task82"
+[ -f "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet8-0.1.0.0/x/Task84/build/Task84/Task84" ] && cp "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet8-0.1.0.0/x/Task84/build/Task84/Task84" "./Task84"
 [ -f "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet8-0.1.0.0/x/Task85/build/Task85/Task85" ] && cp "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet8-0.1.0.0/x/Task85/build/Task85/Task85" "./Task85"
 exit $error_level
