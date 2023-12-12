@@ -3,14 +3,15 @@
 {-# LANGUAGE InstanceSigs #-}
 module SortedList where
     import Data.List (sort)
-    import Test.Tasty.QuickCheck (Arbitrary (arbitrary, shrink), elements, Gen, sample)
+    import Test.Tasty.QuickCheck (Arbitrary (arbitrary, shrink), elements, Gen, sample, vector, vectorOf, choose)
 
     data SortedList a = SortedList [a] deriving (Eq, Show)
-    instance Arbitrary a => Arbitrary (SortedList a) where
+    instance (Arbitrary a, Ord a) => Arbitrary (SortedList a) where
         arbitrary :: Arbitrary a => Gen (SortedList a)
         arbitrary = do
-            x <- arbitrary
-            return $ SortedList [x]
+            size <- choose (0, 10)
+            list <- vectorOf size arbitrary
+            return (SortedList (sort list))
         --arbitrary = elements [SortedList [], SortedList [const arbitrary]]
 
     empty :: SortedList a

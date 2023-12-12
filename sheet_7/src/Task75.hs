@@ -31,5 +31,5 @@ module Main where
     prop_axiom_5 = QC.testProperty "axiom_5" axiom_5
 
     main :: IO ()
-    main = defaultMain $ testGroup "Task72"
+    main = defaultMain $ testGroup "Task75"
         [prop_axiom_1, prop_axiom_2, prop_axiom_3, prop_axiom_4, prop_axiom_5]
