@@ -1,0 +1,6 @@
+#!/bin/bash
+cabal build
+error_level=$?
+[ -f "./Task92" ] && rm -f "./Task92"
+[ -f "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet9-0.1.0.0/x/Task92/build/Task92/Task92" ] && cp "./dist-newstyle/build/x86_64-linux/ghc-9.4.7/sheet9-0.1.0.0/x/Task92/build/Task92/Task92" "./Task92"
+exit $error_level
