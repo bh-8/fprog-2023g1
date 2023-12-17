@@ -50,3 +50,8 @@
 3. Arbitrary generator for distinct pairs
 4. [File manipulation](./sheet_8/src/Task84.hs)
 5. [Rolling Dice](./sheet_8/src/Task85.hs)*, Module '[DiceRoller](./sheet_8/src/DiceRoller.hs)'
+### Exercise Sheet 9
+1. ID and a Monad for counting binds
+2. [making Bingos I](./sheet_9/src/Task92.hs)
+3. making Bingos II
+4. The state of Ants*
