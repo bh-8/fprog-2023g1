@@ -5,14 +5,14 @@ version:            0.1.0.0
 author:             Bernhard Birnbaum
 maintainer:         bernhard.birnbaum@ovgu.de
 
-executable Task91
-    main-is:          Task91.hs
-    build-depends:    base ^>=4.17.2.0
-    hs-source-dirs:   src
-    default-language: Haskell2010
-
 executable Task92
     main-is:          Task92.hs
     build-depends:    base ^>=4.17.2.0, random
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable Task93
+    main-is:          Task93.hs
+    build-depends:    base ^>=4.17.2.0, random, containers, directory
     hs-source-dirs:   src
     default-language: Haskell2010
