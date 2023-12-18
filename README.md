@@ -53,5 +53,5 @@
 ### Exercise Sheet 9 [[task sheet](./sheet_9/exercise09.pdf)]
 1. ID and a Monad for counting binds
 2. [making Bingos I](./sheet_9/src/Task92.hs)
-3. making Bingos II
+3. [making Bingos II](./sheet_9/src/Task93.hs)
 4. The state of Ants*
