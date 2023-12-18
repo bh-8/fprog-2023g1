@@ -1,7 +1,7 @@
 {-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
 {-# HLINT ignore "Use newtype instead of data" #-}
 
-module Task91 where
+module Main where
     data Identity a = Identity a
     instance Functor Identity where
         fmap :: (a -> b) -> Identity a -> Identity b
