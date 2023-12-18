@@ -1,6 +1,4 @@
-{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
-{-# HLINT ignore "Use newtype instead of data" #-}
-
+{-# LANGUAGE InstanceSigs #-}
 module Main where
     data Identity a = Identity a
     instance Functor Identity where
@@ -24,11 +22,13 @@ module Main where
         pure v = CountBinds (0, v)
         (<*>) :: CountBinds (a -> b) -> CountBinds a -> CountBinds b
         (<*>) (CountBinds (i, f)) (CountBinds (j, v)) = CountBinds (j, f v)
+    val :: (CountBinds a) -> a
+    val (CountBinds (i, v)) = v
     instance Monad CountBinds where
         (>>=) :: CountBinds a -> (a -> CountBinds b) -> CountBinds b
         --(>>=) (CountBinds (i, v)) f = f v
         --TODO: add i + 1 to CountBinds b
-        (>>=) (CountBinds (i, v)) f = f v
+        (>>=) (CountBinds (i, v)) f = CountBinds (i+1, val (f v))
 
     binds :: CountBinds a -> Integer
     binds (CountBinds (i, v)) = i
@@ -37,7 +37,8 @@ module Main where
     two = do
         x <- return 1
         y <- return 2
-        return (x + y)
+        z <- return 3
+        return (x + y + z)
 
     main :: IO ()
     main = do
