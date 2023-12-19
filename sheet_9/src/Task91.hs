@@ -10,6 +10,8 @@ module Main where
         (<*>) :: Identity (a -> b) -> Identity a -> Identity b
         (<*>) (Identity f) (Identity v)= Identity (f v)
     instance Monad Identity where
+        return :: a -> Identity a
+        return = pure
         (>>=) :: Identity a -> (a -> Identity b) -> Identity b
         (>>=) (Identity v) f = f v
 
@@ -25,10 +27,12 @@ module Main where
     val :: (CountBinds a) -> a
     val (CountBinds (i, v)) = v
     instance Monad CountBinds where
+        return :: a -> CountBinds a
+        return = pure
         (>>=) :: CountBinds a -> (a -> CountBinds b) -> CountBinds b
-        --(>>=) (CountBinds (i, v)) f = f v
-        --TODO: add i + 1 to CountBinds b
-        (>>=) (CountBinds (i, v)) f = CountBinds (i+1, val (f v))
+        (>>=) (CountBinds (i, v)) f = 
+            let CountBinds (i', result) = f v
+            in CountBinds (i + i' + 1, result)
 
     binds :: CountBinds a -> Integer
     binds (CountBinds (i, v)) = i
@@ -37,8 +41,7 @@ module Main where
     two = do
         x <- return 1
         y <- return 2
-        z <- return 3
-        return (x + y + z)
+        return (x + y)
 
     main :: IO ()
     main = do

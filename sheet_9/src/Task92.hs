@@ -4,7 +4,7 @@ module Main where
     import System.IO (stdout)
     import Data.List (intercalate)
     import Numeric (showBin)
-    
+
     bingoList :: Int -> IO [Int]
     bingoList 0 = return []
     bingoList n = do

@@ -6,7 +6,7 @@ module Main where
     import Numeric (showBin)
     import Data.Map
     import System.Directory (doesFileExist)
-    
+
     bingoList :: Int -> [(Int, String)] -> IO [String]
     bingoList 0 _ = return []
     bingoList n m = do
@@ -48,7 +48,7 @@ module Main where
             file_content <- readFile input_file
             let buzzword_list = words file_content
             let buzzword_map = bingoListToMap buzzword_list (length buzzword_list)
-            
+
             putStr "How many bingo cards should be generated? "
             hFlush stdout
             input_n <- getLine
